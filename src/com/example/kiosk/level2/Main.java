@@ -47,7 +47,7 @@ public class Main {
                 break;
             } else if (
                 // 사용자가 입력한 값이 0보다 크고, 메뉴 번호 범위 내에 있을 때 실행
-                userInput > 0 && userInput < menuNumber) {
+                    userInput > 0 && userInput < menuNumber) {
                 selectMenu(menuItems, userInput);
             } else {
                 // 오류 메시지 출력, 반복문 재시작
@@ -59,7 +59,7 @@ public class Main {
 
     //  선택한 메뉴의 이름, 가격, 설명을 출력
     public static void selectMenu(List<MenuItem> menuItems, int number) {
-        MenuItem selectedItem = menuItems.get(number-1);
+        MenuItem selectedItem = menuItems.get(number - 1);
         System.out.print("선택한 메뉴 : ");
         System.out.println(selectedItem.getName() + ", " + selectedItem.getPrice() + ", " + selectedItem.getDescription());
     }

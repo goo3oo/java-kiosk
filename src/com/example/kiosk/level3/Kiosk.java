@@ -9,6 +9,7 @@ public class Kiosk {
     public Kiosk(List<MenuItem> menuItems) {
         this.menuItems = menuItems;
     }
+
     // 키오스크 시작
     public void start() {
         // 메뉴를 반복적으로 표시
@@ -40,14 +41,14 @@ public class Kiosk {
             }
 
 
-            if(userInput==0){
+            if (userInput == 0) {
                 // 사용자 입력값이 0이라면 종료
                 System.out.println("종료합니다.");
                 break;
-            }else if(userInput>=0 && userInput<menuNumber){
+            } else if (userInput >= 0 && userInput < menuNumber) {
                 // 사용자 입력값이 1 이상이고 메뉴 번호 범위 내에 있을 때만 선택 처리
                 selectMenu(menuItems, userInput);
-            }else{
+            } else {
                 // 오류 메시지 출력, 반복문 재시작
                 System.out.println("유효한 메뉴번호가 아닙니다. 다시 입력해주세요.");
             }
@@ -56,7 +57,7 @@ public class Kiosk {
 
     // 선택한 메뉴의 이름, 가격, 설명을 출력
     public static void selectMenu(List<MenuItem> menuItems, int userInput) {
-        MenuItem selectedItem = menuItems.get(userInput-1);
+        MenuItem selectedItem = menuItems.get(userInput - 1);
         System.out.print("선택한 메뉴 : ");
         System.out.println(selectedItem.getName() + ", " + selectedItem.getPrice() + ", " + selectedItem.getDescription());
     }
