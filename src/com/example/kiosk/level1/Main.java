@@ -34,14 +34,11 @@ public class Main {
             }
 
             //사용자 입력값에 따른 분기
-            switch (menuNumber) {
-                case 0:
-                    //프로그램 종료
-                    System.out.println("프로그램을 종료합니다.");
-                    return;
-                default:
-                    //잘못된 숫자가 입력된 경우
-                    System.out.println("유효하지 않은 숫자입니다.");
+            if (menuNumber == 0) {//프로그램 종료
+                System.out.println("프로그램을 종료합니다.");
+                return;
+            } else {//잘못된 숫자가 입력된 경우
+                System.out.println("유효하지 않은 숫자입니다.");
             }
         }
     }
