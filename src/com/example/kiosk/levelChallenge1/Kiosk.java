@@ -79,10 +79,10 @@ public class Kiosk {
      */
     public int printMainMenu() {
         System.out.println("[ MAIN MENU ]");
-        int menuNumber = 1;
+        int menuNumber = 0;
 
         for (Menu menuElement : menu) {
-            System.out.println((menuNumber++) + ". " + menuElement.getCategoryName());
+            System.out.println((++menuNumber) + ". " + menuElement.getCategoryName());
         }
         System.out.println("0. 종료");
         if (!cart.getCartList().isEmpty()) {
